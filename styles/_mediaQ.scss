@@ -1,0 +1,94 @@
+@media screen and (min-width: 768px) 
+{
+    h1 {
+        text-align: center;
+        margin: 20px;
+    }
+    .container-fonction {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        position: relative;
+        .fonction {
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            right: 0;
+            bottom: 40px;
+            &__bloc {
+                flex-direction: column;
+                height: auto;
+                width: 100%;
+                p {
+                    text-align: center;
+                }
+            }
+            &__nbr {
+                height: 40px;
+                padding: 12px;
+                left: 0px;
+                top: 50px;
+                width: 40px;
+            }
+            i {
+                font-size: 35px;
+            }
+        }
+    }
+    
+    .section-restaurant {
+        .restaurant {
+            margin-top: 20px;
+            &__responsive {
+                flex-direction: row;
+            }
+        }
+    }
+    .restaurant-card {
+        margin: 10px;
+    }
+    .footer {
+        .footerlogo {
+            text-align: center;
+            margin: 10px;
+            font-size: 30px;
+        }
+    }
+    .footer-text {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .menu {
+        &__title {
+            justify-content: center;
+        }
+    }
+    .menu__bloc {
+        align-items: center;
+    }
+    .dish {
+        width: 650px;
+
+        &__text {
+            width: 650px;
+        }
+    }
+
+}
+
+
+@media screen and (min-width: 1024px) 
+{
+    .container-fonction {
+        .fonction {
+            &__bloc {
+                width: 130%;
+                height: 230px;
+                justify-content: center;
+            }
+        }
+    }
+                
+
+}

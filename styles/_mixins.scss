@@ -1,0 +1,93 @@
+@mixin button {
+    height: 50px;
+    border-radius: 35px;
+    background-image: linear-gradient(to bottom right, $secondaire, $primaire);
+    color: #fff;
+    box-shadow: 3px 3px 7px lighten($footer, 50);
+    border: none;
+    align-items: center;
+    opacity: 1;
+    &:hover {
+        opacity: 0.9;
+        box-shadow: 3px 3px 7px lighten($footer, 30);
+    }   
+}
+
+@mixin nbr {
+    position: relative;
+    left: 28px;
+    top: 25px;
+    border-radius: 50px;
+    background-color: $primaire;
+    width: 30px;
+    height: 27px;
+    text-align: center;
+    padding: 4px;
+    color: #fff;
+}
+
+
+@mixin card {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 3px 3px 7px $shadow;
+}
+
+@mixin fonction {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height:75px;
+    margin: 15px;
+    background-color: $fondgris;
+    padding: 20px;
+    i {
+        margin: 20px;
+        color: gray;
+        font-size: 20px;
+    }
+    p {
+        font-weight: bold;
+    }
+}
+
+
+@mixin nouveau {
+    position: relative;
+    color: darken($tertiaire, 30);
+    font-weight: bold;
+    background-color: $tertiaire;
+    width: fit-content;
+    padding: 2px 8px 2px 8px;
+    font-size: 14px;
+    left: 80%;
+    top: 10%;
+    margin: 0;
+}
+
+
+
+
+
+@mixin heart {
+
+    border: none;
+    background: none;
+    margin: 10px;
+    i {
+        font-size: 30px;
+    }
+    &:focus {
+        i {
+            content: "\f004";
+            font-family: 'FontAwesome';
+            font-size: 30px;
+            background:-webkit-linear-gradient(top right, $primaire, $secondaire);
+            background-clip:text;
+            -webkit-background-clip:text;
+            color: transparent;
+            transition: all 500ms linear;
+        }
+    }
+}

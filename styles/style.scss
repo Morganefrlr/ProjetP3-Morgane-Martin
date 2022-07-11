@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+} 
+
+@import "_loadspin.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_menu.scss";
+@import "_keyframes.scss";
+
+
+.m1 {
+    background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+}
+.m2 {
+    background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
+.m3 {
+    background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+.m4 {
+    background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+}
+
+
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    box-shadow: 0px 3px 4px $shadow;
+    img {
+        width: 205px;
+        height: 40px;
+        margin: 28px;
+    }
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+.locality {
+    display: flex;
+    justify-content: center;
+    background: darken($fondgris, 5);
+    i {
+        margin: 15px 12px 0 0;
+        font-size: 20px;
+    }
+}
+.locality-title {
+    display: flex;
+    flex-direction: column;
+    background: $fondgris;
+    align-items: center;
+    padding: 10px;
+    h1 {
+        text-align: center;
+        width: 55%;           
+        margin-bottom: 0px;
+    }
+    p {
+        text-align: center;
+        width: 90%;
+    }
+}
+.locality-btn {
+    display: flex;
+    justify-content: center;
+    @include button;
+    width: 220px;
+    margin: 15px 0 35px 0;
+}
+
+.section-fonction {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    h1 {
+        margin-left: 10px;
+    }
+}
+.fonction {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    right: 10px;
+    &__nbr {
+        @include nbr;
+    }
+    &__bloc {
+        @include card;
+        @include fonction;
+    }
+    .purple {
+        background-color: lighten($primaire, 35);
+        i {
+            color: $primaire;
+        }
+    }
+}
+
+.section-restaurant {
+    display: flex;
+    flex-direction: column;
+    background: $fondgris;
+    padding: 40px 22px 70px 22px;
+    h1 {
+        margin-left: 10px;
+    }
+    .restaurant {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        &__responsive {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+}
+.restaurant-card {
+    @include card;
+    margin: 10px 0 10px 0;
+    &__bg {
+        height: 250px;
+        border-radius: 20px 20px 0 0; 
+        background-size: 100%;
+        background-position: center;
+    }
+    .nouveau {
+        @include nouveau;
+    }
+    &__down {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+    .card-text {
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+        &__name {
+            font-weight: bold;
+            margin: 0;
+        }
+        &__place {
+            margin: 0;
+        }
+    }
+    .heart {
+        @include heart;
+    }
+}
+
+
+
+
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $footer;
+    height: auto;
+    color: #fff;
+    padding: 20px;
+    .footerlogo {
+        font-family: 'Shrikhand', cursive;
+        margin: 25px;
+        font-size: 22px;
+    }
+}
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    &__bloc{
+        display: flex;
+        flex-direction: column;
+    }
+    p {
+        margin: 4px;
+    }
+    a {
+        text-decoration: none;
+        color: #fff;
+        margin: 4px;
+    }
+    .bloc-icon {
+        display: flex;
+        flex-direction: row;  
+        align-content: center;
+        p {
+            margin: 0 10px 10px 10px
+        }
+        i {
+            font-size: 14px;
+            margin-top: 3px;
+        }
+    }
+    
+}
+
+
+@import "_mediaQ.scss";
+

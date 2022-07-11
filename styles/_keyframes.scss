@@ -1,0 +1,60 @@
+@keyframes dish-card {
+    from { 
+        transform: translateY(10px);
+        opacity: 0;
+
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+
+    }
+}
+
+@keyframes dish-text {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 80%;
+    }
+}
+
+
+@keyframes check {
+    from {
+        transform: translateX(112px);  
+
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loadopacity {
+    0% {
+        opacity: 1;
+        height: 1080px;
+    }
+    85% {
+        opacity: 1;
+        height: 1080px;
+    }
+    100% {
+        opacity: 0;
+        height: 0;
+    }
+
+}
