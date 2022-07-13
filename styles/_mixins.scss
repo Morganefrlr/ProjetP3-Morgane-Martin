@@ -7,6 +7,7 @@
     border: none;
     align-items: center;
     opacity: 1;
+    cursor: pointer;
     &:hover {
         opacity: 0.9;
         box-shadow: 3px 3px 7px lighten($footer, 30);
@@ -15,7 +16,7 @@
 
 @mixin nbr {
     position: relative;
-    left: 28px;
+    left: 14px;
     top: 25px;
     border-radius: 50px;
     background-color: $primaire;
@@ -39,7 +40,7 @@
     justify-content: flex-start;
     align-items: center;
     height:75px;
-    margin: 15px;
+    margin: 15px 0 15px 0;
     background-color: $fondgris;
     padding: 20px;
     i {
@@ -74,15 +75,16 @@
 
     border: none;
     background: none;
-    margin: 10px;
+    margin: 10px 25px;
+    cursor: pointer;
     i {
-        font-size: 30px;
+        font-size: 25px;
     }
     &:focus {
         i {
             content: "\f004";
             font-family: 'FontAwesome';
-            font-size: 30px;
+            font-size: 25px;
             background:-webkit-linear-gradient(top right, $primaire, $secondaire);
             background-clip:text;
             -webkit-background-clip:text;

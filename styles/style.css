@@ -4,7 +4,7 @@
 
 .container-loader {
   width: 100%;
-  height: 1080px;
+  height: 100%;
   background-color: rgb(38, 37, 37);
   margin: 0;
   padding: 0;
@@ -13,6 +13,8 @@
   align-items: center;
   -webkit-animation: loadopacity 3s linear both;
           animation: loadopacity 3s linear both;
+  position: fixed;
+  z-index: 10;
 }
 .container-loader p {
   margin-left: 15px;
@@ -61,14 +63,19 @@
 .header-menu {
   flex-direction: row;
   box-shadow: none;
+  position: relative;
 }
 .header-menu a {
   text-decoration: none;
-  font-size: 28px;
-  position: relative;
-  right: 90px;
-  top: 38px;
+  font-size: 20px;
+  position: absolute;
+  left: 36px;
+  top: 25px;
   color: #000;
+}
+
+.main-menu {
+  height: 1536px;
 }
 
 .menu-img {
@@ -95,7 +102,8 @@
   justify-content: space-between;
   width: 100%;
   align-items: center;
-  padding: 20px;
+  padding: 0 5px 0 5px;
+  margin: 21px;
 }
 .menu__title h2 {
   font-family: "Shrikhand", cursive;
@@ -105,16 +113,17 @@
 .menu__title .heart {
   border: none;
   background: none;
-  margin: 10px;
+  margin: 10px 25px;
+  cursor: pointer;
   font-size: 25px;
 }
 .menu__title .heart i {
-  font-size: 30px;
+  font-size: 25px;
 }
 .menu__title .heart:focus i {
   content: "\f004";
   font-family: "FontAwesome";
-  font-size: 30px;
+  font-size: 25px;
   background: -webkit-linear-gradient(top right, #9356dc, #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
@@ -126,13 +135,15 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 0 10px 0 10px;
+  margin: 0 10px 25px 10px;
 }
 .menu__bloc .bloc-title {
-  margin: 10px 0 0 20px;
-  font-size: 20px;
-  width: 36px;
+  margin: 10px 0 3px 4px;
+  font-size: 16px;
+  width: 41px;
   border-bottom: 3px solid #99e2d0;
+  text-transform: uppercase;
+  padding: 0 0 4px 0;
 }
 
 .dish {
@@ -142,7 +153,7 @@
   border-radius: 20px;
   box-shadow: 3px 3px 7px rgb(193, 190, 193);
   background-color: #fff;
-  height: 90px;
+  height: 80px;
   padding: 10px;
   margin: 10px 0 10px 0;
   -webkit-animation: dish-card 800ms both;
@@ -158,14 +169,14 @@
   flex-direction: column;
   width: 100%;
   justify-content: center;
-  padding: 19px;
+  padding: 18px 18px 18px 9px;
   position: absolute;
 }
 
 .dish__name {
   display: flex;
   flex-direction: row;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   margin: 2px;
 }
@@ -173,6 +184,7 @@
 .text-line2 {
   display: inline-flex;
   justify-content: space-between;
+  font-size: 14px;
 }
 .text-line2 p {
   margin: 3px;
@@ -221,51 +233,6 @@
           animation: dish-text 600ms linear both;
 }
 
-/*.dish-check::before {
-    content: "";
-    position: absolute;
-    left: 100%;
-    width: 100%;
-    height: 100%;
-    background-color: $tertiaire;
-    transition: all 500ms linear;
-    z-index: -1;
-}
-.check {
-    display: flex;
-    font-size: 22px;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    justify-content: center;
-    padding-bottom: 7px;
-    position: relative;
-    transform: translateX(80px);
-    transition: transform 500ms linear;
-
-    i {
-        transform: rotate(-1turn);
-        transition: transform 500ms linear;
-    }
-}
-
-.dish:focus {
-    & .dish-check::before {
-        left: 0;
-    }
-
-    & .dish__text {
-        animation: dish-text 500ms both;
-    }
-    & .check {
-        transform: translateX(0); 
-    }
-    & i {
-        transform: rotate(0turn);
-    }
-}
-*/
 .menu-btn {
   display: flex;
   justify-content: center;
@@ -277,17 +244,17 @@
   border: none;
   align-items: center;
   opacity: 1;
+  cursor: pointer;
   width: 180px;
-  margin: 40px 0 60px 0;
+  margin: 25px 0 85px 0;
 }
 .menu-btn:hover {
   opacity: 0.9;
   box-shadow: 3px 3px 7px #828282;
 }
 
-.m {
-  position: relative;
-  bottom: 50px;
+.margin {
+  margin: 20px 0 0 0;
 }
 
 .dish:nth-child(1) {
@@ -412,11 +379,11 @@
 @-webkit-keyframes loadopacity {
   0% {
     opacity: 1;
-    height: 1080px;
+    height: 100%;
   }
   85% {
     opacity: 1;
-    height: 1080px;
+    height: 100%;
   }
   100% {
     opacity: 0;
@@ -426,11 +393,11 @@
 @keyframes loadopacity {
   0% {
     opacity: 1;
-    height: 1080px;
+    height: 100%;
   }
   85% {
     opacity: 1;
-    height: 1080px;
+    height: 100%;
   }
   100% {
     opacity: 0;
@@ -467,9 +434,9 @@ header {
   box-shadow: 0px 3px 4px rgb(193, 190, 193);
 }
 header img {
-  width: 205px;
-  height: 40px;
-  margin: 28px;
+  width: 170px;
+  height: 32px;
+  margin: 16px;
 }
 
 nav {
@@ -483,8 +450,11 @@ nav {
   background: #e9e9e9;
 }
 .locality i {
-  margin: 15px 12px 0 0;
-  font-size: 20px;
+  margin: 15px 17px 0 0;
+  font-size: 16px;
+}
+.locality p {
+  margin-right: 23px;
 }
 
 .locality-title {
@@ -492,12 +462,12 @@ nav {
   flex-direction: column;
   background: #f6f6f6;
   align-items: center;
-  padding: 10px;
+  padding: 40px 10px;
 }
 .locality-title h1 {
   text-align: center;
   width: 55%;
-  margin-bottom: 0px;
+  margin: 0px;
 }
 .locality-title p {
   text-align: center;
@@ -515,8 +485,9 @@ nav {
   border: none;
   align-items: center;
   opacity: 1;
+  cursor: pointer;
   width: 220px;
-  margin: 15px 0 35px 0;
+  margin: 15px 0 20px 0;
 }
 .locality-btn:hover {
   opacity: 0.9;
@@ -526,10 +497,11 @@ nav {
 .section-fonction {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 25px 15px 50px 15px;
 }
 .section-fonction h1 {
-  margin-left: 10px;
+  margin-left: 7px;
+  font-size: 22px;
 }
 
 .fonction {
@@ -540,7 +512,7 @@ nav {
 }
 .fonction__nbr {
   position: relative;
-  left: 28px;
+  left: 14px;
   top: 25px;
   border-radius: 50px;
   background-color: #9356dc;
@@ -559,7 +531,7 @@ nav {
   justify-content: flex-start;
   align-items: center;
   height: 75px;
-  margin: 15px;
+  margin: 15px 0 15px 0;
   background-color: #f6f6f6;
   padding: 20px;
 }
@@ -582,10 +554,10 @@ nav {
   display: flex;
   flex-direction: column;
   background: #f6f6f6;
-  padding: 40px 22px 70px 22px;
+  padding: 25px 22px 70px 22px;
 }
 .section-restaurant h1 {
-  margin-left: 10px;
+  font-size: 22px;
 }
 .section-restaurant .restaurant {
   display: flex;
@@ -645,19 +617,21 @@ nav {
 }
 .restaurant-card .card-text__place {
   margin: 0;
+  font-size: 14px;
 }
 .restaurant-card .heart {
   border: none;
   background: none;
-  margin: 10px;
+  margin: 10px 25px;
+  cursor: pointer;
 }
 .restaurant-card .heart i {
-  font-size: 30px;
+  font-size: 25px;
 }
 .restaurant-card .heart:focus i {
   content: "\f004";
   font-family: "FontAwesome";
-  font-size: 30px;
+  font-size: 25px;
   background: -webkit-linear-gradient(top right, #9356dc, #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
@@ -675,8 +649,8 @@ nav {
 }
 .footer .footerlogo {
   font-family: "Shrikhand", cursive;
-  margin: 25px;
-  font-size: 22px;
+  margin: 10px 0 18px 0;
+  font-size: 18px;
 }
 
 .footer-text {
@@ -688,12 +662,13 @@ nav {
   flex-direction: column;
 }
 .footer-text p {
-  margin: 4px;
+  margin: 4px 0 4px 0;
 }
 .footer-text a {
   text-decoration: none;
   color: #fff;
-  margin: 4px;
+  margin: 4px 0 4px 0;
+  cursor: pointer;
 }
 .footer-text .bloc-icon {
   display: flex;
@@ -704,7 +679,7 @@ nav {
   margin: 0 10px 10px 10px;
 }
 .footer-text .bloc-icon i {
-  font-size: 14px;
+  font-size: 13px;
   margin-top: 3px;
 }
 
