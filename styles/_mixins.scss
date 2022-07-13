@@ -59,12 +59,14 @@
     color: darken($tertiaire, 30);
     font-weight: bold;
     background-color: $tertiaire;
-    width: fit-content;
-    padding: 2px 8px 2px 8px;
-    font-size: 14px;
+    width: 16%;
+    height: 10%;
+    padding: 5px;
+    font-size: 11px;
     left: 80%;
     top: 10%;
     margin: 0;
+    text-align: center;
 }
 
 
@@ -90,6 +92,8 @@
             -webkit-background-clip:text;
             color: transparent;
             transition: all 500ms linear;
+            outline: none;
         }
     }
+    
 }

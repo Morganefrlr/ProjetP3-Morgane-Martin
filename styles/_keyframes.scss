@@ -11,28 +11,6 @@
     }
 }
 
-@keyframes dish-text {
-    from {
-        width: 100%;
-    }
-    to {
-        width: 80%;
-    }
-}
-
-
-@keyframes check {
-    from {
-        transform: translateX(112px);  
-
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-
-
 
 @keyframes spin {
     0% {
