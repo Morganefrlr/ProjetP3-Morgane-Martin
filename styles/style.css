@@ -135,12 +135,17 @@
   transition: all 500ms linear;
   outline: none;
 }
+.menu__responsive {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
 .menu__bloc {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 0 10px 25px 10px;
+  margin-top: 25px;
 }
 .menu__bloc .bloc-title {
   margin: 10px 0 3px 4px;
@@ -723,14 +728,11 @@ nav {
   .menu__title {
     justify-content: center;
   }
-  .menu__bloc {
+  .menu__responsive {
     align-items: center;
   }
-  .dish {
-    width: 650px;
-  }
-  .dish__text {
-    width: 650px;
+  .menu__bloc {
+    width: 80%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -738,5 +740,22 @@ nav {
     width: 130%;
     height: 230px;
     justify-content: center;
+  }
+  .menu__responsive {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+  .menu__bloc {
+    width: 30%;
+  }
+  .main-menu {
+    height: 872px;
+  }
+  .height {
+    height: 962px;
+  }
+  .menu-btn {
+    margin-top: 50px;
   }
 }/*# sourceMappingURL=style.css.map */

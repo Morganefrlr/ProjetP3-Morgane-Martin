@@ -63,15 +63,19 @@
         &__title {
             justify-content: center;
         }
+
+        &__responsive {
+            align-items: center;
+        }
     }
     .menu__bloc {
-        align-items: center;
+        width: 80%;
     }
     .dish {
-        width: 650px;
+        
 
         &__text {
-            width: 650px;
+            
         }
     }
 
@@ -89,6 +93,29 @@
             }
         }
     }
-                
+
+    .menu {
+
+        &__responsive {
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: baseline;
+        }
+    }
+
+    .menu__bloc {
+        width: 30%;
+    }
+      
+    .main-menu {
+        height: 872px;
+    }
+    .height {
+        height: 962px;
+    }
+
+    .menu-btn {
+        margin-top: 50px;
+    }
 
 }
